@@ -104,13 +104,14 @@ a {
 }
 
 .hero-wrapper {
+  display: flex;
+  align-items: center;
   position: relative;
   background-color: #e6f0ff;
   height: calc(100vh - 88px);
 }
 
 .hero {
-  padding-top: 120px;
   width: 50.4%;
 }
 
@@ -144,7 +145,7 @@ a {
 
 .hero .hero-img {
   position: absolute;
-  max-height: 80%;
+  max-height: 90%;
   bottom: 0;
   right: calc((100vw - 1110px) / 2 - 50px);
 }
