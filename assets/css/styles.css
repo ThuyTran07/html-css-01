@@ -586,6 +586,11 @@ a {
   line-height: 175%;
 }
 
+.footer .social {
+  display: flex;
+  gap: 16px;
+}
+
 .footer .row:last-child {
   margin-top: 80px;
   color: #c2c2c2;
