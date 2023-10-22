@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 01</title>
+    <title>Besnik.</title>
 
     <!-- favicon -->
     <link
@@ -96,21 +96,67 @@
     />
     <!-- stylesheet -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="fix-navbar">
       <div class="content">
         <nav class="navbar">
+          <!-- Tablet/Mobile Menu -->
+          <div class="tablet-mobile-nav">
+            <label for="tablet__menu-control" class="tablet__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                  fill="currentColor"
+                />
+              </svg>
+            </label>
+            <div class="tablet__menu">
+              <input
+                type="checkbox"
+                class="tablet__menu-control"
+                id="tablet__menu-control"
+                hidden
+              />
+              <label for="tablet__menu-control" class="tablet__overlay"></label>
+              <div class="tablet__menu-drawer">
+                <a class="" href="#">
+                  <img src="./assets/img/Logo.svg" alt="Besnik." />
+                </a>
+                <label for="tablet__menu-control">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 384 512"
+                  >
+                    <path
+                      d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </label>
+                <ul class="tablet__menu-list" id="tablet-menu"></ul>
+              </div>
+            </div>
+          </div>
+
           <!-- Logo -->
-          <a href="#"><img src="./assets/img/Logo.svg" alt="Besnik." /></a>
+          <a class="logo" href="#">
+            <img src="./assets/img/Logo.svg" alt="Besnik." />
+          </a>
           <!-- Menu -->
-          <ul>
+          <ul class="pc-menu" id="full-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#resources">Resources</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="show-on-mobile separate">
+              <a href="#contact">Sign In</a>
+            </li>
+            <li class="show-on-mobile"><a href="#contact">Sign Up</a></li>
           </ul>
           <!-- Button -->
           <div class="action">
@@ -453,7 +499,7 @@
       </div>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="">
       <div class="content">
         <div class="row">
           <div class="footer-group">
@@ -531,5 +577,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      const pcMenu = document.querySelector("#full-menu");
+      const tabletMenu = document.querySelector("#tablet-menu");
+      tabletMenu.innerHTML = pcMenu.innerHTML;
+    </script>
   </body>
 </html>
